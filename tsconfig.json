@@ -3,8 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "any": [
-        "dist/any"
+      "@any": [
+        "dist/any",
+        "projects/any/src/public-api"
       ]
     },
     "baseUrl": "./",

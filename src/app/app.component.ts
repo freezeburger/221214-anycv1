@@ -11,5 +11,7 @@ export class AppComponent {
   constructor(
     // @Inject(DispatcherService) public dispatcher:DispatcherService
     public dispatcher:DispatcherService
-  ){}
+  ){
+    console.warn('AppComponent', this.dispatcher)
+  }
 }
