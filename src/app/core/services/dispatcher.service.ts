@@ -4,6 +4,9 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable()
 export class DispatcherService {
 
+  /**
+   * This is the main Observable to expose the Application State towards the components.
+   */
   state$ = new BehaviorSubject<{ time: number }>({ time: Date.now() })
 
   constructor() {
