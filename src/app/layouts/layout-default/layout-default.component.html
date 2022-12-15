@@ -2,6 +2,8 @@
     <ng-content select=".layout-header"></ng-content>
 </header>
 
+<any-navbar></any-navbar>
+
 <main class="container-fluid p-5" [ngClass]="{ lecture : lectureMode }">
 
     <div class="alert alert-info" *ngIf=" !lectureDisclaimer ">

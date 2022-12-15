@@ -1,7 +1,8 @@
 {
   "name": "any",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "peerDependencies": {
+    "bootstrap": "^5.2.3",
     "@angular/common": "^15.0.0",
     "@angular/core": "^15.0.0"
   },

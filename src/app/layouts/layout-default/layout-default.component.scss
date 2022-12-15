@@ -6,9 +6,13 @@ header {
   height: 10vh;
 }
 
+any-navbar{
+  display: block;
+  margin-top: 10vh !important;
+}
+
 main {
   box-sizing: border-box;
-  margin-top: 10vh !important;
   height: 70vh;
 }
 
