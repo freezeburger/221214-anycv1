@@ -11,3 +11,9 @@ export * from './lib/any.module';
 
 export * from './lib/interfaces/any-menu';
 export * from './lib/interfaces/any-menu-provider';
+
+/*
+ * Public tokens
+ */
+
+export * from './lib/any.tokens';
