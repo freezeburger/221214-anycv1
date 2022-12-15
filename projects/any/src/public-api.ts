@@ -3,3 +3,11 @@
  */
 
 export * from './lib/any.module';
+
+
+/*
+ * Public interfaces
+ */
+
+export * from './lib/interfaces/any-menu';
+export * from './lib/interfaces/any-menu-provider';
