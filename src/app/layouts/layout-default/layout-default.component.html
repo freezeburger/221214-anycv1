@@ -1,0 +1,18 @@
+<header class="navbar bg-primary text-white fixed-top" [ngStyle]=" { height : lectureMode ? '5vh' : '10vh' }">
+    <ng-content select=".layout-header"></ng-content>
+</header>
+
+<main class="container-fluid p-5" [ngClass]="{ lecture : lectureMode }">
+
+    <div class="alert alert-info" *ngIf=" !lectureDisclaimer ">
+        <button type="button" class="btn-close" (click)=" lectureDisclaimer = false "></button>
+        <b>Mode lecture :</b> saisissez le raccourci <strong>control.alt.t</strong>
+    </div>
+
+    <ng-content></ng-content>
+
+</main>
+
+<footer class="navbar bg-dark text-white" *ngIf=" !lectureMode ">
+    <ng-content select=".layout-footer"></ng-content>
+</footer>

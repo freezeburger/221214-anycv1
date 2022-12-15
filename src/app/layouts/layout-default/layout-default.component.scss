@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+}
+
+header {
+  height: 10vh;
+}
+
+main {
+  box-sizing: border-box;
+  margin-top: 10vh !important;
+  height: 70vh;
+}
+
+main.lecture{
+  height: 95vh;
+}
+
+footer {
+  box-sizing: border-box;
+  height: 20vh;
+  padding: 50px 0;
+}
