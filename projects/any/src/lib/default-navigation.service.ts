@@ -3,9 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { AnyMenu } from './interfaces/any-menu';
 import { AnyMenuProvider } from './interfaces/any-menu-provider';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class DefaultNavigationService implements AnyMenuProvider {
  
   menu$ =  new BehaviorSubject<AnyMenu>([

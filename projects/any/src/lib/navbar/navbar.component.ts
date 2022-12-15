@@ -1,4 +1,4 @@
-import { Component, Inject, Optional } from '@angular/core';
+import { Component, Inject, Injector, Optional, Self, SkipSelf } from '@angular/core';
 import { ANY_MENU_PROVIDER_TOKEN } from '../any.tokens';
 import { DefaultNavigationService } from '../default-navigation.service';
 import { AnyMenuProvider } from '../interfaces/any-menu-provider';
@@ -18,7 +18,10 @@ import { AnyMenuProvider } from '../interfaces/any-menu-provider';
 export class NavbarComponent {
 
   constructor(
-    @Optional() @Inject(ANY_MENU_PROVIDER_TOKEN) public menuProvider:AnyMenuProvider
-  ){}
+    @Optional() @SkipSelf()  @Inject(ANY_MENU_PROVIDER_TOKEN) public menuProvider:AnyMenuProvider,
+    @Self()  @Inject(ANY_MENU_PROVIDER_TOKEN) public defaultMenuProvider:AnyMenuProvider
+  ){
+    if(!menuProvider) this.menuProvider = defaultMenuProvider
+  }
 
 }
