@@ -1,5 +1,7 @@
 <header class="navbar bg-primary text-white fixed-top" [ngStyle]=" { height : lectureMode ? '5vh' : '10vh' }">
+    
     <ng-content select=".layout-header"></ng-content>
+
 </header>
 
 <any-navbar></any-navbar>
@@ -16,5 +18,7 @@
 </main>
 
 <footer class="navbar bg-dark text-white" *ngIf=" !lectureMode ">
+    
     <ng-content select=".layout-footer"></ng-content>
+
 </footer>
