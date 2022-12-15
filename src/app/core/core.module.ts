@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ANY_MENU_PROVIDER_TOKEN } from '@any';
 import { DispatcherService } from './services/dispatcher.service';
 import { NavigationService } from './services/navigation.service';
 
@@ -7,7 +8,11 @@ import { NavigationService } from './services/navigation.service';
 @NgModule({
   providers: [
     DispatcherService,
-    NavigationService
+    NavigationService,
+    {
+      provide:ANY_MENU_PROVIDER_TOKEN,
+      useExisting:NavigationService
+    }
   ]
 })
 export class CoreModule {

@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, Optional } from '@angular/core';
 import { ANY_MENU_PROVIDER_TOKEN } from '../any.tokens';
 import { AnyMenuProvider } from '../interfaces/any-menu-provider';
 
@@ -10,7 +10,7 @@ import { AnyMenuProvider } from '../interfaces/any-menu-provider';
 export class NavbarComponent {
 
   constructor(
-    @Inject(ANY_MENU_PROVIDER_TOKEN) public menuProvider:AnyMenuProvider
+    @Optional() @Inject(ANY_MENU_PROVIDER_TOKEN) public menuProvider:AnyMenuProvider
   ){}
 
 }

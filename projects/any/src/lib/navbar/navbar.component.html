@@ -1,5 +1,8 @@
-<ul class="nav">
-    <li class="nav-item">
-        <a class="nav-link active" routerLink="/home">Home</a>
+
+<ul class="nav" *ngIf=" (menuProvider?.menu$ | async ) as menu ">
+    
+    <li class="nav-item" *ngFor="let route of menu">
+        <a class="nav-link active" [routerLink]=" ['/', route.path ] ">{{route.label}}</a>
     </li>
+
 </ul>
