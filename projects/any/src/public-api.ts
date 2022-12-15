@@ -3,6 +3,9 @@
  */
 
 export * from './lib/any.module';
+export * from './lib/directives/popin.directive';
+export * from './lib/navbar/navbar.component';
+export * from './lib/default-navigation.service';
 
 
 /*

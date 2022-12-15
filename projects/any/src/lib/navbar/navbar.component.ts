@@ -21,7 +21,7 @@ export class NavbarComponent {
     @Optional() @SkipSelf()  @Inject(ANY_MENU_PROVIDER_TOKEN) public menuProvider:AnyMenuProvider,
     @Self()  @Inject(ANY_MENU_PROVIDER_TOKEN) public defaultMenuProvider:AnyMenuProvider
   ){
-    if(!menuProvider) this.menuProvider = defaultMenuProvider
+    if( !menuProvider ) this.menuProvider = defaultMenuProvider ;
   }
 
 }
