@@ -23,9 +23,9 @@ export class DispatcherService implements TDispatcher<FState>{
   }
 
   dispatch(action: TAction): TError | null {
+    console.table(action);
     return null;
   }
-
 
 }
 

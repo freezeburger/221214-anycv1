@@ -1,0 +1,38 @@
+
+<ng-container *ngTemplateOutlet=" loginMode == 'login' ? login : register"></ng-container>
+
+<div style="text-align: center;">
+    <a href="#" (click)=" $event.preventDefault(); loginMode = 'login' ">Login</a> 
+    or 
+    <a href="#" (click)=" $event.preventDefault(); loginMode = 'register' ">Register </a>
+</div>
+
+
+<ng-template #login>
+    <div class="card d-flex flex-column p-2" style="width:50%; margin:auto">
+        <h2>Identification</h2>
+        <br>
+        <input type="text" class="form-control" placeholder="Email">
+        <br>
+        <input type="text" class="form-control" placeholder="Password">
+        <br>
+        <button class="btn btn-primary" (click)="sendLoginRequest()">
+            LOGIN
+        </button>
+    </div>
+</ng-template>
+
+
+<ng-template #register>
+    <div class="card d-flex flex-column p-2" style="width:50%; margin:auto">
+        <h2>Inscription</h2>
+        <br>
+        <input type="text" class="form-control" placeholder="Email">
+        <br>
+        <input type="text" class="form-control" placeholder="Password">
+        <br>
+        <button class="btn btn-primary" (click)="sendRegisterRequest()">
+            REGISTER
+        </button>
+    </div>
+</ng-template>
