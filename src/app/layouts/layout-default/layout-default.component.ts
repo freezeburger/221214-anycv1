@@ -17,7 +17,10 @@ export class LayoutDefaultComponent implements OnInit, DoCheck, OnDestroy {
   public lectureMode  = false;
 
   // 1 LifeCycle : Creation
-  constructor(private tabTitleService: Title) { }
+  constructor(private tabTitleService: Title) { 
+    // console.log(Math.random())
+    // window.addEventListener('keydown', this.toggleLectureMode )
+  }
 
   // 2 LifeCycle : Initialisation (DOM)
   ngOnInit(): void {
@@ -33,7 +36,7 @@ export class LayoutDefaultComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   @HostListener('window:keydown.control.alt.t')
-  toggleLectureMode(){
+  toggleLectureMode = () =>{
     this.lectureMode = !this.lectureMode;
     console.log( 'toggleLectureMode', this.lectureMode)
   }

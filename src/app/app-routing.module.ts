@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NavigationService } from './core/services/navigation.service';
 
 import { PageHomeComponent } from './page/page-home/page-home.component';
 import { PageLoginComponent } from './page/page-login/page-login.component';
@@ -13,11 +14,13 @@ const routes: Routes = [
   },
   {
     path:'login',
-    component:PageLoginComponent
+    component:PageLoginComponent,
+    canDeactivate:[ NavigationService ]
   },
   {
     path:'message',
-    component:PageMessageComponent
+    component:PageMessageComponent,
+    canActivate:[ NavigationService ]
   },
   {
     path:'news',

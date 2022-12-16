@@ -74,6 +74,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { NavigationService } from &#x27;./core/services/navigation.service&#x27;;
 
 import { PageHomeComponent } from &#x27;./page/page-home/page-home.component&#x27;;
 import { PageLoginComponent } from &#x27;./page/page-login/page-login.component&#x27;;
@@ -87,11 +88,13 @@ const routes: Routes &#x3D; [
   },
   {
     path:&#x27;login&#x27;,
-    component:PageLoginComponent
+    component:PageLoginComponent,
+    canDeactivate:[ NavigationService ]
   },
   {
     path:&#x27;message&#x27;,
-    component:PageMessageComponent
+    component:PageMessageComponent,
+    canActivate:[ NavigationService ]
   },
   {
     path:&#x27;news&#x27;,

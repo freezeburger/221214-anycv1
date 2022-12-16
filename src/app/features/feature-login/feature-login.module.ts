@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FeatureLoginComponent } from './feature-login.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -9,7 +10,7 @@ import { FeatureLoginComponent } from './feature-login.component';
     FeatureLoginComponent
   ],
   imports: [
-    CommonModule
+    SharedModule
   ],
   exports: [
     FeatureLoginComponent

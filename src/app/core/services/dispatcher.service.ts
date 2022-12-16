@@ -17,13 +17,14 @@ export class DispatcherService implements TDispatcher<FState>{
   }
 
   state$ = new BehaviorSubject<FState>(this._state);
-  action$ = new BehaviorSubject<TAction[]>([]);
+  action$ = new BehaviorSubject<TAction | null >(null);
 
   constructor() {
   }
 
   dispatch(action: TAction): TError | null {
     console.table(action);
+    this.action$.next(action);
     return null;
   }
 
