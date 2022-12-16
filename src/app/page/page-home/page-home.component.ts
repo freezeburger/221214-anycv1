@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { DispatcherService } from 'src/app/core/services/dispatcher.service';
 
 @Component({
   selector: 'app-page-home',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-home.component.scss']
 })
 export class PageHomeComponent {
+
+  dispatcher = inject(DispatcherService);
 
 }

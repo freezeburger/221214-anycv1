@@ -9,6 +9,8 @@
     <ng-container>
         <h1>MAIN CONTENT</h1>
 
+        <code>{{dispatcher.state$ | async | json}}</code>
+
         <img src="https://picsum.photos/200/200" anyPopin [popinDelay]="1000">
         <img src="https://picsum.photos/200/200?123" anyPopin [popinDelay]="2000">
         <img src="https://picsum.photos/200/200?456" anyPopin [popinDelay]="3000">
